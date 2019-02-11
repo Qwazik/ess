@@ -390,7 +390,7 @@ body{
     background: white;
     z-index: 1;
     animation: fadeServicesDetail .5s;
-    
+    display: none;
     &__text{
         padding: 2.5rem 5rem;
         position: relative;
