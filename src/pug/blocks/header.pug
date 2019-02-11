@@ -1,22 +1,27 @@
 header.main-header
   .top-panel.fadeInDown.animated
     .container
-      .row.top-panel__row
+      .row.top-panel__row.align-items-center.align-items-lg-stretch
         .col-auto.top-panel__logo
           a(href="/").top-logo: img(src="img/logo.png", alt="").img-responsive
-        .col-auto.top-panel__nav
+        .col-auto.top-panel__nav.d-none.d-lg-block
           nav.main-nav
-            a(href="#home").main-nav__link.main-nav__link_active Главная
-            a(href="#about").main-nav__link О компании
-            a(href="#solution").main-nav__link Решения
-            a(href="#services").main-nav__link Услуги
-            a(href="#exp").main-nav__link Опыт
-            a(href="#contacts").main-nav__link Контакты
+            a(href="#home").scrollto.main-nav__link.main-nav__link_active Главная
+            a(href="#about").scrollto.main-nav__link О компании
+            a(href="#solution").scrollto.main-nav__link Решения
+            a(href="#services").scrollto.main-nav__link Услуги
+            a(href="#exp").scrollto.main-nav__link Опыт
+            a(href="#contacts").scrollto.main-nav__link Контакты
+        .col-auto.d-lg-none
+          button.mobile-nav-btn
+            span
+            span
+            span
   .main-header__center.fadeIn.animated
     .container
       .header-center
         h1.header-center__header
-          img(src="img/logo.png", alt="").header-center__image
+          img(src="img/logo.png", alt="").header-center__image.img-responsive
           br
           | Электронные системы <br> безопасности
   .section-arrow.main-header__arrow: i.fa 

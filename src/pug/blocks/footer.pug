@@ -2,8 +2,8 @@ footer.main-footer
   .main-footer__main
     .container
       .row.align-items-center
-        .col-auto
-          .main-footer__logo: a(href="#").main-footer-logo: img(src="img/footer-logo.png", alt="")
+        .col-12.col-md-4.col-lg-auto.mb-3.mb-lg-0
+          .main-footer__logo: a(href="#").main-footer-logo: img(src="img/footer-logo.png", alt="").img-responsive
           .main-footer__contacts
             ul.footer-contacts
               li.footer-contacts__item
@@ -15,38 +15,38 @@ footer.main-footer
               li.footer-contacts__item
                 span.footer-contacts__ico: i.fa.fa-envelope
                 | sales@essprofi.ru
-        .col-auto
+        .col-auto.d-none.d-md-block
           .footer-sep
-        .col.ml-auto
+        .col-12.col-md.ml-auto
           .footer-form
             .footer-form__header
               span Задайте нам свой вопрос!
-              a(href="#").fancybox.vacancy-link
+              a(href="#modalVacancy").fancybox.vacancy-link
                 span.vacancy-link__ico: i.fa.fa-user
                 span.vacancy-link__text Есть вакансии
             .footer-form__desc Задайте вопрос любым удобным для Вас способом и мы свяжемся с Вами в ближайшее время
             .footer-form__form
             .footer-form__btns
-              a(href="#callback").fancybox.btn.btn_light.btn_fill Заказать звонок
-              a(href="#callback").fancybox.btn.btn_light.btn_fill Написать письмо
+              a(href="#modalFeedback").fancybox.btn.btn_light.btn_fill Заказать звонок
+              a(href="#modalCallback").fancybox.btn.btn_light.btn_fill Написать письмо
   .main-footer__bottom    
     .container
       .row
-        .col
+        .col.d-none.d-lg-block
           .main-footer__nav
             nav.main-nav
-              a(href="#home").main-nav__link.main-nav__link_active Главная
-              a(href="#about").main-nav__link О компании
-              a(href="#solution").main-nav__link Решения
-              a(href="#services").main-nav__link Услуги
-              a(href="#exp").main-nav__link Опыт
-              a(href="#contacts").main-nav__link Контакты
-        .col-auto.ml-auto.d-flex
+              a(href="#home").scrollto.main-nav__link.main-nav__link_active Главная
+              a(href="#about").scrollto.main-nav__link О компании
+              a(href="#solution").scrollto.main-nav__link Решения
+              a(href="#services").scrollto.main-nav__link Услуги
+              a(href="#exp").scrollto.main-nav__link Опыт
+              a(href="#contacts").scrollto.main-nav__link Контакты
+        .col.col-md-auto.ml-auto.d-flex
           .main-footer__copyright 2018 Разработка сайта
-          .main-footer__studio: a(href="#").itc: img(src="img/itn.png", alt="")
+          .main-footer__studio: a(href="#"): img(src="img/itn.png", alt="").img-responsive
 .modals.d-none
-  .modal-vac
-    .modal-close
+  .modal-vac#modalVacancy
+    .modal-close(data-fancybox-close)
     .modal-vac__header
       .modal-vac__name Специалист
       .modal-vac__props
@@ -73,8 +73,8 @@ footer.main-footer
     .modal-vac__footer
       a(href="#").btn.btn_primary.modal-vac__btn Откликнуться на вакансию
 
-  .modal
-    .modal-close.modal-close_light
+  .modal#modalFeedback
+    .modal-close.modal-close_light(data-fancybox-close)
     .modal__header Написать письмо
     .modal__form
       form(action="" data-parsley-validate)
@@ -85,8 +85,8 @@ footer.main-footer
     .modal__footer
       a(href="#") Передумали ?
       a(href="#") Хотите заказaть звонок ?
-  .modal
-    .modal-close.modal-close_light
+  .modal#modalCallback
+    .modal-close.modal-close_light(data-fancybox-close)
     .modal__header Заказать звонок
     .modal__form
       form(action="" data-parsley-validate)
@@ -96,8 +96,8 @@ footer.main-footer
     .modal__footer
       a(href="#") Передумали ?
       a(href="#") Хотите заказaть звонок ?
-  .modal-service
-    .modal-service__close
+  .modal-service#modalService
+    .modal-service__close(data-fancybox-close)
     .modal-service__col
       .modal-service__image(style="background-image: url(img/modal-service-image.jpg)")
     .modal-service__col
@@ -110,8 +110,8 @@ footer.main-footer
           br
           p Выполненные работы:
           p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-  .modal-portfolio
-    .modal-close
+  .modal-portfolio#modalPortfolio
+    .modal-close(data-fancybox-close)
     .modal-portfolio__name Наши объекты
     .portfolio-gallary
       .swiper-container.gallery-top

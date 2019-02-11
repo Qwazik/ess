@@ -1,13 +1,13 @@
 extends _template
 
 block main
-  .about
+  .about#about
     .container
       .row
         .col-12
           h2.h.h_xl.h_line О компании
       .row
-        .col-6
+        .col-12.col-lg-6
           .about-slider(data-swiper-name="about" data-swiper-container data-swiper-items="1")
             .vertical-pagination.about-slider__pagination(
               data-swiper-pagination
@@ -28,39 +28,14 @@ block main
         .col-6
       .row
         .col-12
-          .section-arrow: i.fa 
+          .section-arrow.mt-2: i.fa 
   .section.map-block.pb-2(data-tabs)
     .map-card(data-card).fadeInLeft.animated
       .map-card__back(data-back) Вернуться к карте
-      .map-card__image(data-image)
-        .map-card__name(data-name)
-      .map-card__detail(data-detail)
-    .map-nav
-      .map-nav__header.h.h_l Объекты <br> в Северо-Западном <br> районе
-      .map-nav__nav
-        button.map-nav__nav-left: i.fa.fa-angle-left
-        button.map-nav__nav-right: i.fa.fa-angle-right
-      .map-nav__container(data-tabs-content data-tabs-active="map-nav__list_active")
-        -for(var j=0;j<6;j++)
-          .map-nav__list: .map-nav__scroll
-            ul.map-list
-              -for(var i = 0; i<=10; i++)
-                li.map-list__item
-                  .map-place-desc(data-image="../img/map-detail.jpg")
-                    p.map-place-desc__header(data-name) 
-                      !=i
-                      | Энергонефтересурс (ЭНР)
-                    p: b Дата сдачи объекта:
-                    p 01.03.2000
-                    p: b Основная продукция:
-                    p технические масла различных групп
-                    .d-none(data-detail)
-                      .default-content
-                        .h.h_m.mb-1 Основные выполненные работы:
-                        ul
-                          li Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam repellendus pariatur saepe! Minus unde labore eaque aliquam ducimus perspiciatis quis vitae temporibus. Neque corrupti id optio voluptatem. Quos, esse libero.
-                          li Et soluta necessitatibus nihil odit in neque velit vel amet voluptates, sapiente ipsa modi veritatis libero magni ullam suscipit ut, ipsam repellendus molestias praesentium rerum iusto beatae unde at! Tempore!
-                          li Est, voluptates aperiam adipisci asperiores quod corrupti ut quibusdam. Expedita officiis natus ad? Commodi neque quis eos obcaecati, soluta, modi eaque sint illum odit velit atque impedit officiis voluptatem ipsum.
+      .map-card__content
+        .map-card__image(data-image)
+          .map-card__name(data-name)
+        .map-card__detail(data-detail)
     .container
       .row
         .col-12
@@ -104,21 +79,46 @@ block main
                 | объекта
               .map-place__marker
         .section-arrow: i.fa 
+    .map-nav
+      .map-nav__header.h.h_l Объекты <br> в Северо-Западном <br> районе
+      .map-nav__nav
+        button.map-nav__nav-left: i.fa.fa-angle-left
+        button.map-nav__nav-right: i.fa.fa-angle-right
+      .map-nav__container(data-tabs-content data-tabs-active="map-nav__list_active")
+        -for(var j=0;j<6;j++)
+          .map-nav__list: .map-nav__scroll
+            ul.map-list
+              -for(var i = 0; i<=10; i++)
+                li.map-list__item
+                  .map-place-desc(data-image="../img/map-detail.jpg")
+                    p.map-place-desc__header(data-name) 
+                      !=i
+                      | Энергонефтересурс (ЭНР)
+                    p: b Дата сдачи объекта:
+                    p 01.03.2000
+                    p: b Основная продукция:
+                    p технические масла различных групп
+                    .d-none(data-detail)
+                      .default-content
+                        .h.h_m.mb-1 Основные выполненные работы:
+                        ul
+                          li Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam repellendus pariatur saepe! Minus unde labore eaque aliquam ducimus perspiciatis quis vitae temporibus. Neque corrupti id optio voluptatem. Quos, esse libero.
+                          li Et soluta necessitatibus nihil odit in neque velit vel amet voluptates, sapiente ipsa modi veritatis libero magni ullam suscipit ut, ipsam repellendus molestias praesentium rerum iusto beatae unde at! Tempore!
+                          li Est, voluptates aperiam adipisci asperiores quod corrupti ut quibusdam. Expedita officiis natus ad? Commodi neque quis eos obcaecati, soluta, modi eaque sint illum odit velit atque impedit officiis voluptatem ipsum.
+    
   .section.sert(data-tabs)
     .container
-      .row
-        .col-6
-          h2.h.h_xl.h_line Сертификаты
-        .col-6.sert-tabs__nav
-          .tabs-nav(data-tabs-nav data-tabs-active="tabs-nav__item_active")
-            button.tabs-nav__item Сертификаты
-            button.tabs-nav__item Благодарственные письма
       .row.mb-2
-        .col-4
+        .col-12.col-lg-4.mb-4.mb-lg-0
+          h2.h.h_xl.h_line.mb-4 Сертификаты
           .default-content
             .h.h_l Сертификат ГОСТ Р (Ростест)
             p Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna  aliqua. Ut enim ad minim veniam, quis  nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit  in voluptate velit esse cillum dolore eu  fugiat nulla pariatur.
-        .col-8
+        .col-12.col-lg-8
+          .sert-tabs__nav.mb-4
+            .tabs-nav(data-tabs-nav data-tabs-active="tabs-nav__item_active")
+              button.tabs-nav__item Сертификаты
+              button.tabs-nav__item Благодарственные письма
           .tabs-content(data-tabs-content data-tabs-active="tabs-content__item_active")
             -for(var i = 0; i<2; i++)
               .tabs-content__item
@@ -147,12 +147,13 @@ block main
             .slider-nav
               button.slider-nav__prev(data-prev): i.fa.fa-angle-left
               button.slider-nav__next(data-next): i.fa.fa-angle-right
-            .services-detail__name(data-name)
-            .services-detail__desc(data-detail)
-              .default-content
-                p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-                p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-        .col-6.services__col
+            .services-detail__content
+              .services-detail__name(data-name)
+              .services-detail__desc(data-detail)
+                .default-content
+                  p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
+                  p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
+        .col-12.col-md-6.services__col
           a(href="#").service-item
             .service-item__image(data-image="img/services-detail.jpg"): img(src="img/service1.jpg", alt="").img-responsive
             .service-item__text
@@ -162,7 +163,7 @@ block main
                 .default-content
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-        .col-6.services__col
+        .col-12.col-md-6.services__col
           a(href="#").service-item
             .service-item__image(data-image="img/services-detail.jpg"): img(src="img/service2.jpg", alt="").img-responsive
             .service-item__text
@@ -172,7 +173,7 @@ block main
                 .default-content
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-        .col-6.services__col
+        .col-12.col-md-6.services__col
           a(href="#").service-item
             .service-item__image(data-image="img/services-detail.jpg"): img(src="img/service3.jpg", alt="").img-responsive
             .service-item__text
@@ -182,7 +183,7 @@ block main
                 .default-content
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-        .col-6.services__col
+        .col-12.col-md-6.services__col
           a(href="#").service-item
             .service-item__image(data-image="img/services-detail.jpg"): img(src="img/service4.jpg", alt="").img-responsive
             .service-item__text
@@ -192,7 +193,7 @@ block main
                 .default-content
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
                   p Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.
-        .col-12.d-flex.justify-content-center.mb-2
+        .col-12.d-flex.justify-content-center.mt-2
           a(href="#").btn.btn_bd.services__more Показать еще
       .row
         .col-12
@@ -211,7 +212,11 @@ block main
         h2.h.h_xl.h_line Наши заказчики
         .partners
           -for(var i=1;i<=24;i++)
-            .partners__item: img(src="img/partners"+i+".jpg", alt="")
+            .partners__item
+              .tooltip-partners
+                .tooltip-partners-close
+                .tooltip-partners__desc один из крупнейших в мире  производителей бытовой  техники и электронных  товаров
+              img(src="img/partners"+i+".jpg", alt="")
     .section-arrow: i.fa 
   .section.team
     .container
@@ -219,7 +224,7 @@ block main
         .col-12
           h2.h.h_xl.h_line Лица компании
     .container
-      .team-slider(data-swiper-container data-swiper-items="4")
+      .team-slider(data-swiper-name="team" data-swiper-container data-swiper-items="4")
         .slider-nav
             button.slider-nav__prev(data-prev): i.fa.fa-angle-left
             button.slider-nav__next(data-next): i.fa.fa-angle-right
@@ -263,23 +268,23 @@ block main
         .col-12
           h2.h.h_xl.h_line Портфолио
       .row.mb-2.portfolio__row
-        .col-6.portfolio__col
-          a(href="#").portfolio-item
+        .col-12.col-md-6.portfolio__col
+          a(href="#modalPortfolio").portfolio-item.fancybox
             .portfolio-item__image: img(src="img/service1.jpg", alt="").img-responsive
             .portfolio-item__text
               .portfolio-item__name Проектирование
-        .col-6.portfolio__col
-          a(href="#").portfolio-item
+        .col-12.col-md-6.portfolio__col
+          a(href="#modalPortfolio").portfolio-item.fancybox
             .portfolio-item__image: img(src="img/service2.jpg", alt="").img-responsive
             .portfolio-item__text
               .portfolio-item__name Монтаж
-        .col-6.portfolio__col
-          a(href="#").portfolio-item
+        .col-12.col-md-6.portfolio__col
+          a(href="#modalPortfolio").portfolio-item.fancybox
             .portfolio-item__image: img(src="img/service3.jpg", alt="").img-responsive
             .portfolio-item__text
               .portfolio-item__name Обслуживание
-        .col-6.portfolio__col
-          a(href="#").portfolio-item
+        .col-12.col-md-6.portfolio__col
+          a(href="#modalPortfolio").portfolio-item.fancybox
             .portfolio-item__image: img(src="img/service4.jpg", alt="").img-responsive
             .portfolio-item__text
               .portfolio-item__name ПОДБОР И ПРОДАЖА ОБОРУДОВАНИЯ
