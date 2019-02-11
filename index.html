@@ -21,10 +21,13 @@
       <header class="main-header">
         <div class="top-panel fadeInDown animated">
           <div class="container">
-            <div class="row top-panel__row">
+            <div class="row top-panel__row align-items-center align-items-lg-stretch">
               <div class="col-auto top-panel__logo"><a class="top-logo" href="/"><img class="img-responsive" src="img/logo.png" alt=""></a></div>
-              <div class="col-auto top-panel__nav">
-                <nav class="main-nav"><a class="main-nav__link main-nav__link_active" href="#home">Главная</a><a class="main-nav__link" href="#about">О компании</a><a class="main-nav__link" href="#solution">Решения</a><a class="main-nav__link" href="#services">Услуги</a><a class="main-nav__link" href="#exp">Опыт</a><a class="main-nav__link" href="#contacts">Контакты</a></nav>
+              <div class="col-auto top-panel__nav d-none d-lg-block">
+                <nav class="main-nav"><a class="scrollto main-nav__link main-nav__link_active" href="#home">Главная</a><a class="scrollto main-nav__link" href="#about">О компании</a><a class="scrollto main-nav__link" href="#solution">Решения</a><a class="scrollto main-nav__link" href="#services">Услуги</a><a class="scrollto main-nav__link" href="#exp">Опыт</a><a class="scrollto main-nav__link" href="#contacts">Контакты</a></nav>
+              </div>
+              <div class="col-auto d-lg-none">
+                <button class="mobile-nav-btn"><span></span><span></span><span></span></button>
               </div>
             </div>
           </div>
@@ -32,13 +35,13 @@
         <div class="main-header__center fadeIn animated">
           <div class="container">
             <div class="header-center">
-              <h1 class="header-center__header"><img class="header-center__image" src="img/logo.png" alt=""><br>Электронные системы <br> безопасности</h1>
+              <h1 class="header-center__header"><img class="header-center__image img-responsive" src="img/logo.png" alt=""><br>Электронные системы <br> безопасности</h1>
             </div>
           </div>
         </div>
         <div class="section-arrow main-header__arrow"><i class="fa"></i></div>
       </header>
-      <div class="about">
+      <div class="about" id="about">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -46,7 +49,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
               <div class="about-slider" data-swiper-name="about" data-swiper-container data-swiper-items="1">
                 <div class="vertical-pagination about-slider__pagination" data-swiper-pagination data-pagination-class="vertical-pagination__item" data-pagination-active="vertical-pagination__item_active"></div>
                 <div class="about-slider__wrapper" data-swiper-wrapper>
@@ -71,7 +74,7 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <div class="section-arrow"><i class="fa"></i></div>
+              <div class="section-arrow mt-2"><i class="fa"></i></div>
             </div>
           </div>
         </div>
@@ -79,10 +82,72 @@
       <div class="section map-block pb-2" data-tabs>
         <div class="map-card fadeInLeft animated" data-card>
           <div class="map-card__back" data-back>Вернуться к карте</div>
-          <div class="map-card__image" data-image>
-            <div class="map-card__name" data-name></div>
+          <div class="map-card__content">
+            <div class="map-card__image" data-image>
+              <div class="map-card__name" data-name></div>
+            </div>
+            <div class="map-card__detail" data-detail></div>
           </div>
-          <div class="map-card__detail" data-detail></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h h_xl h_line h_light">Наша география</h2>
+            </div>
+          </div>
+          <div class="map">
+            <div class="map__main" data-tabs-nav data-tabs-active="map__place_active">
+              <div class="map__place">
+                <div class="map-place">
+                  <div class="map-place__text">
+                    <div class="map-place__count">83</div>объекта
+                  </div>
+                  <div class="map-place__marker"> </div>
+                </div>
+              </div>
+              <div class="map__place">
+                <div class="map-place">
+                  <div class="map-place__text">
+                    <div class="map-place__count">120</div>объекта
+                  </div>
+                  <div class="map-place__marker"> </div>
+                </div>
+              </div>
+              <div class="map__place">
+                <div class="map-place">
+                  <div class="map-place__text">
+                    <div class="map-place__count">126</div>объекта
+                  </div>
+                  <div class="map-place__marker"> </div>
+                </div>
+              </div>
+              <div class="map__place">
+                <div class="map-place">
+                  <div class="map-place__text">
+                    <div class="map-place__count">233</div>объекта
+                  </div>
+                  <div class="map-place__marker"> </div>
+                </div>
+              </div>
+              <div class="map__place">
+                <div class="map-place">
+                  <div class="map-place__text">
+                    <div class="map-place__count">243</div>объекта
+                  </div>
+                  <div class="map-place__marker"> </div>
+                </div>
+              </div>
+              <div class="map__place">
+                <div class="map-place">
+                  <div class="map-place__text">
+                    <div class="map-place__count">273</div>объекта
+                  </div>
+                  <div class="map-place__marker"></div>
+                </div>
+              </div>
+            </div>
+            <div class="section-arrow"><i class="fa"></i></div>
+          </div>
         </div>
         <div class="map-nav">
           <div class="map-nav__header h h_l">Объекты <br> в Северо-Западном <br> районе</div>
@@ -1449,88 +1514,24 @@
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="h h_xl h_line h_light">Наша география</h2>
-            </div>
-          </div>
-          <div class="map">
-            <div class="map__main" data-tabs-nav data-tabs-active="map__place_active">
-              <div class="map__place">
-                <div class="map-place">
-                  <div class="map-place__text">
-                    <div class="map-place__count">83</div>объекта
-                  </div>
-                  <div class="map-place__marker"> </div>
-                </div>
-              </div>
-              <div class="map__place">
-                <div class="map-place">
-                  <div class="map-place__text">
-                    <div class="map-place__count">120</div>объекта
-                  </div>
-                  <div class="map-place__marker"> </div>
-                </div>
-              </div>
-              <div class="map__place">
-                <div class="map-place">
-                  <div class="map-place__text">
-                    <div class="map-place__count">126</div>объекта
-                  </div>
-                  <div class="map-place__marker"> </div>
-                </div>
-              </div>
-              <div class="map__place">
-                <div class="map-place">
-                  <div class="map-place__text">
-                    <div class="map-place__count">233</div>объекта
-                  </div>
-                  <div class="map-place__marker"> </div>
-                </div>
-              </div>
-              <div class="map__place">
-                <div class="map-place">
-                  <div class="map-place__text">
-                    <div class="map-place__count">243</div>объекта
-                  </div>
-                  <div class="map-place__marker"> </div>
-                </div>
-              </div>
-              <div class="map__place">
-                <div class="map-place">
-                  <div class="map-place__text">
-                    <div class="map-place__count">273</div>объекта
-                  </div>
-                  <div class="map-place__marker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="section-arrow"><i class="fa"></i></div>
-          </div>
-        </div>
       </div>
       <div class="section sert" data-tabs>
         <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <h2 class="h h_xl h_line">Сертификаты</h2>
-            </div>
-            <div class="col-6 sert-tabs__nav">
-              <div class="tabs-nav" data-tabs-nav data-tabs-active="tabs-nav__item_active">
-                <button class="tabs-nav__item">Сертификаты</button>
-                <button class="tabs-nav__item">Благодарственные письма</button>
-              </div>
-            </div>
-          </div>
           <div class="row mb-2">
-            <div class="col-4">
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+              <h2 class="h h_xl h_line mb-4">Сертификаты</h2>
               <div class="default-content">
                 <div class="h h_l">Сертификат ГОСТ Р (Ростест)</div>
                 <p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna  aliqua. Ut enim ad minim veniam, quis  nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit  in voluptate velit esse cillum dolore eu  fugiat nulla pariatur.</p>
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-12 col-lg-8">
+              <div class="sert-tabs__nav mb-4">
+                <div class="tabs-nav" data-tabs-nav data-tabs-active="tabs-nav__item_active">
+                  <button class="tabs-nav__item">Сертификаты</button>
+                  <button class="tabs-nav__item">Благодарственные письма</button>
+                </div>
+              </div>
               <div class="tabs-content" data-tabs-content data-tabs-active="tabs-content__item_active">
                 <div class="tabs-content__item">
                   <div class="sert-slider" data-swiper-name="sert" data-swiper-container data-swiper-items="3">
@@ -1586,16 +1587,18 @@
                   <button class="slider-nav__prev" data-prev><i class="fa fa-angle-left"></i></button>
                   <button class="slider-nav__next" data-next><i class="fa fa-angle-right"></i></button>
                 </div>
-                <div class="services-detail__name" data-name></div>
-                <div class="services-detail__desc" data-detail>
-                  <div class="default-content">
-                    <p>Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.</p>
-                    <p>Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.</p>
+                <div class="services-detail__content">
+                  <div class="services-detail__name" data-name></div>
+                  <div class="services-detail__desc" data-detail>
+                    <div class="default-content">
+                      <p>Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.</p>
+                      <p>Проектирование систем видеонаблюдения, пожарной сигнализации, охранной сигнализации, контроля доступа любой сложности в соответствии с действующими нормативами и правилами. Включает в себя подбор наиболее оптимального оборудование под поставленное техническое задание, согласование с заказчиком всех элементов системы и непосредственное изготовление проектной документации.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-6 services__col"><a class="service-item" href="#">
+            <div class="col-12 col-md-6 services__col"><a class="service-item" href="#">
                 <div class="service-item__image" data-image="img/services-detail.jpg"><img class="img-responsive" src="img/service1.jpg" alt=""></div>
                 <div class="service-item__text">
                   <div class="service-item__name" data-name>Проектирование</div>
@@ -1607,7 +1610,7 @@
                     </div>
                   </div>
                 </div></a></div>
-            <div class="col-6 services__col"><a class="service-item" href="#">
+            <div class="col-12 col-md-6 services__col"><a class="service-item" href="#">
                 <div class="service-item__image" data-image="img/services-detail.jpg"><img class="img-responsive" src="img/service2.jpg" alt=""></div>
                 <div class="service-item__text">
                   <div class="service-item__name" data-name>Монтаж</div>
@@ -1619,7 +1622,7 @@
                     </div>
                   </div>
                 </div></a></div>
-            <div class="col-6 services__col"><a class="service-item" href="#">
+            <div class="col-12 col-md-6 services__col"><a class="service-item" href="#">
                 <div class="service-item__image" data-image="img/services-detail.jpg"><img class="img-responsive" src="img/service3.jpg" alt=""></div>
                 <div class="service-item__text">
                   <div class="service-item__name" data-name>Обслуживание</div>
@@ -1631,7 +1634,7 @@
                     </div>
                   </div>
                 </div></a></div>
-            <div class="col-6 services__col"><a class="service-item" href="#">
+            <div class="col-12 col-md-6 services__col"><a class="service-item" href="#">
                 <div class="service-item__image" data-image="img/services-detail.jpg"><img class="img-responsive" src="img/service4.jpg" alt=""></div>
                 <div class="service-item__text">
                   <div class="service-item__name" data-name>ПОДБОР И ПРОДАЖА ОБОРУДОВАНИЯ</div>
@@ -1643,7 +1646,7 @@
                     </div>
                   </div>
                 </div></a></div>
-            <div class="col-12 d-flex justify-content-center mb-2"><a class="btn btn_bd services__more" href="#">Показать еще</a></div>
+            <div class="col-12 d-flex justify-content-center mt-2"><a class="btn btn_bd services__more" href="#">Показать еще</a></div>
           </div>
           <div class="row">
             <div class="col-12">
@@ -1805,30 +1808,150 @@
         <div class="container mb-4">
           <h2 class="h h_xl h_line">Наши заказчики</h2>
           <div class="partners">
-            <div class="partners__item"><img src="img/partners1.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners2.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners3.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners4.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners5.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners6.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners7.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners8.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners9.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners10.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners11.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners12.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners13.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners14.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners15.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners16.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners17.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners18.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners19.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners20.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners21.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners22.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners23.jpg" alt=""></div>
-            <div class="partners__item"><img src="img/partners24.jpg" alt=""></div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners1.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners2.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners3.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners4.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners5.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners6.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners7.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners8.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners9.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners10.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners11.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners12.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners13.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners14.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners15.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners16.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners17.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners18.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners19.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners20.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners21.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners22.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners23.jpg" alt="">
+            </div>
+            <div class="partners__item">
+              <div class="tooltip-partners">
+                <div class="tooltip-partners-close"></div>
+                <div class="tooltip-partners__desc">один из крупнейших в мире  производителей бытовой  техники и электронных  товаров</div>
+              </div><img src="img/partners24.jpg" alt="">
+            </div>
           </div>
         </div>
         <div class="section-arrow"><i class="fa"></i></div>
@@ -1842,7 +1965,7 @@
           </div>
         </div>
         <div class="container">
-          <div class="team-slider" data-swiper-container data-swiper-items="4">
+          <div class="team-slider" data-swiper-name="team" data-swiper-container data-swiper-items="4">
             <div class="slider-nav">
               <button class="slider-nav__prev" data-prev><i class="fa fa-angle-left"></i></button>
               <button class="slider-nav__next" data-next><i class="fa fa-angle-right"></i></button>
@@ -1895,22 +2018,22 @@
             </div>
           </div>
           <div class="row mb-2 portfolio__row">
-            <div class="col-6 portfolio__col"><a class="portfolio-item" href="#">
+            <div class="col-12 col-md-6 portfolio__col"><a class="portfolio-item fancybox" href="#modalPortfolio">
                 <div class="portfolio-item__image"><img class="img-responsive" src="img/service1.jpg" alt=""></div>
                 <div class="portfolio-item__text">
                   <div class="portfolio-item__name">Проектирование</div>
                 </div></a></div>
-            <div class="col-6 portfolio__col"><a class="portfolio-item" href="#">
+            <div class="col-12 col-md-6 portfolio__col"><a class="portfolio-item fancybox" href="#modalPortfolio">
                 <div class="portfolio-item__image"><img class="img-responsive" src="img/service2.jpg" alt=""></div>
                 <div class="portfolio-item__text">
                   <div class="portfolio-item__name">Монтаж</div>
                 </div></a></div>
-            <div class="col-6 portfolio__col"><a class="portfolio-item" href="#">
+            <div class="col-12 col-md-6 portfolio__col"><a class="portfolio-item fancybox" href="#modalPortfolio">
                 <div class="portfolio-item__image"><img class="img-responsive" src="img/service3.jpg" alt=""></div>
                 <div class="portfolio-item__text">
                   <div class="portfolio-item__name">Обслуживание</div>
                 </div></a></div>
-            <div class="col-6 portfolio__col"><a class="portfolio-item" href="#">
+            <div class="col-12 col-md-6 portfolio__col"><a class="portfolio-item fancybox" href="#modalPortfolio">
                 <div class="portfolio-item__image"><img class="img-responsive" src="img/service4.jpg" alt=""></div>
                 <div class="portfolio-item__text">
                   <div class="portfolio-item__name">ПОДБОР И ПРОДАЖА ОБОРУДОВАНИЯ</div>
@@ -1927,8 +2050,8 @@
         <div class="main-footer__main">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-auto">
-                <div class="main-footer__logo"><a class="main-footer-logo" href="#"><img src="img/footer-logo.png" alt=""></a></div>
+              <div class="col-12 col-md-4 col-lg-auto mb-3 mb-lg-0">
+                <div class="main-footer__logo"><a class="main-footer-logo" href="#"><img class="img-responsive" src="img/footer-logo.png" alt=""></a></div>
                 <div class="main-footer__contacts">
                   <ul class="footer-contacts">
                     <li class="footer-contacts__item"><span class="footer-contacts__ico"><i class="fa fa-phone"></i></span>+7 (499) 164-91-34,  +7 (495) 772-16-25</li>
@@ -1937,15 +2060,15 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-auto">
+              <div class="col-auto d-none d-md-block">
                 <div class="footer-sep"></div>
               </div>
-              <div class="col ml-auto">
+              <div class="col-12 col-md ml-auto">
                 <div class="footer-form">
-                  <div class="footer-form__header"><span>Задайте нам свой вопрос!</span><a class="fancybox vacancy-link" href="#"><span class="vacancy-link__ico"><i class="fa fa-user"></i></span><span class="vacancy-link__text">Есть вакансии</span></a></div>
+                  <div class="footer-form__header"><span>Задайте нам свой вопрос!</span><a class="fancybox vacancy-link" href="#modalVacancy"><span class="vacancy-link__ico"><i class="fa fa-user"></i></span><span class="vacancy-link__text">Есть вакансии</span></a></div>
                   <div class="footer-form__desc">Задайте вопрос любым удобным для Вас способом и мы свяжемся с Вами в ближайшее время</div>
                   <div class="footer-form__form"></div>
-                  <div class="footer-form__btns"><a class="fancybox btn btn_light btn_fill" href="#callback">Заказать звонок</a><a class="fancybox btn btn_light btn_fill" href="#callback">Написать письмо</a></div>
+                  <div class="footer-form__btns"><a class="fancybox btn btn_light btn_fill" href="#modalFeedback">Заказать звонок</a><a class="fancybox btn btn_light btn_fill" href="#modalCallback">Написать письмо</a></div>
                 </div>
               </div>
             </div>
@@ -1954,22 +2077,22 @@
         <div class="main-footer__bottom">   
           <div class="container">
             <div class="row">
-              <div class="col">
+              <div class="col d-none d-lg-block">
                 <div class="main-footer__nav">
-                  <nav class="main-nav"><a class="main-nav__link main-nav__link_active" href="#home">Главная</a><a class="main-nav__link" href="#about">О компании</a><a class="main-nav__link" href="#solution">Решения</a><a class="main-nav__link" href="#services">Услуги</a><a class="main-nav__link" href="#exp">Опыт</a><a class="main-nav__link" href="#contacts">Контакты</a></nav>
+                  <nav class="main-nav"><a class="scrollto main-nav__link main-nav__link_active" href="#home">Главная</a><a class="scrollto main-nav__link" href="#about">О компании</a><a class="scrollto main-nav__link" href="#solution">Решения</a><a class="scrollto main-nav__link" href="#services">Услуги</a><a class="scrollto main-nav__link" href="#exp">Опыт</a><a class="scrollto main-nav__link" href="#contacts">Контакты</a></nav>
                 </div>
               </div>
-              <div class="col-auto ml-auto d-flex">
+              <div class="col col-md-auto ml-auto d-flex">
                 <div class="main-footer__copyright">2018 Разработка сайта</div>
-                <div class="main-footer__studio"><a class="itc" href="#"><img src="img/itn.png" alt=""></a></div>
+                <div class="main-footer__studio"><a href="#"><img class="img-responsive" src="img/itn.png" alt=""></a></div>
               </div>
             </div>
           </div>
         </div>
       </footer>
       <div class="modals d-none">
-        <div class="modal-vac">
-          <div class="modal-close"></div>
+        <div class="modal-vac" id="modalVacancy">
+          <div class="modal-close" data-fancybox-close></div>
           <div class="modal-vac__header">
             <div class="modal-vac__name">Специалист</div>
             <div class="modal-vac__props">
@@ -2002,8 +2125,8 @@
           </div>
           <div class="modal-vac__footer"><a class="btn btn_primary modal-vac__btn" href="#">Откликнуться на вакансию</a></div>
         </div>
-        <div class="modal">
-          <div class="modal-close modal-close_light"></div>
+        <div class="modal" id="modalFeedback">
+          <div class="modal-close modal-close_light" data-fancybox-close></div>
           <div class="modal__header">Написать письмо</div>
           <div class="modal__form">
             <form action="" data-parsley-validate>
@@ -2023,8 +2146,8 @@
           </div>
           <div class="modal__footer"><a href="#">Передумали ?</a><a href="#">Хотите заказaть звонок ?</a></div>
         </div>
-        <div class="modal">
-          <div class="modal-close modal-close_light"></div>
+        <div class="modal" id="modalCallback">
+          <div class="modal-close modal-close_light" data-fancybox-close></div>
           <div class="modal__header">Заказать звонок</div>
           <div class="modal__form">
             <form action="" data-parsley-validate>
@@ -2041,8 +2164,8 @@
           </div>
           <div class="modal__footer"><a href="#">Передумали ?</a><a href="#">Хотите заказaть звонок ?</a></div>
         </div>
-        <div class="modal-service">
-          <div class="modal-service__close"></div>
+        <div class="modal-service" id="modalService">
+          <div class="modal-service__close" data-fancybox-close></div>
           <div class="modal-service__col">
             <div class="modal-service__image" style="background-image: url(img/modal-service-image.jpg)"></div>
           </div>
@@ -2059,8 +2182,8 @@
             </div>
           </div>
         </div>
-        <div class="modal-portfolio">
-          <div class="modal-close"></div>
+        <div class="modal-portfolio" id="modalPortfolio">
+          <div class="modal-close" data-fancybox-close></div>
           <div class="modal-portfolio__name">Наши объекты</div>
           <div class="portfolio-gallary">
             <div class="swiper-container gallery-top">
