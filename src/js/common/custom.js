@@ -1,5 +1,5 @@
 $(function(){
-  var TABS_SLIDERS = [];
+  TABS_SLIDERS = [];
   $('.scrollto').q('scrollto');
   jQuery('.map-nav__scroll').scrollbar();
   $('input[type="tel"], input[name="tel"]').mask('+7(999)999-99-99');
