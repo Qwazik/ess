@@ -5,7 +5,11 @@ $(function(){
   $('input[type="tel"], input[name="tel"]').mask('+7(999)999-99-99');
 
   /* portfolio gal */
-  $(window).on('load', function () {
+
+  
+$('.fancybox-portfolio').fancybox({
+  smallBtn: false,
+  afterLoad: function(){
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 4,
       slidesPerView: 10,
@@ -21,7 +25,6 @@ $(function(){
         }
       }
     });
-    TABS_SLIDERS.push(galleryThumbs);
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
       navigation: {
@@ -32,10 +35,9 @@ $(function(){
         swiper: galleryThumbs
       }
     });
-    TABS_SLIDERS.push(galleryTop);
-  })
-  /* portfolio gal */
-
+  }
+});
+/* portfolio gal */
  
   $('.fancybox').fancybox({
     smallBtn: false,
