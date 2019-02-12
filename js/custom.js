@@ -40,10 +40,11 @@ $(function(){
   $('.fancybox').fancybox({
     smallBtn: false,
     afterLoad: function(){
-      
-      TABS_SLIDERS.forEach(function (slider) {
-        slider.update();
-      });
+      setTimeout(function(){
+        TABS_SLIDERS.forEach(function (slider) {
+          slider.update();
+        },100);
+      })
       $('.fancybox').fancybox({
         smallBtn:false
       })
