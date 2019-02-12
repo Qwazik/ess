@@ -157,8 +157,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 8rem;
+    
     &__center{
         text-align: center;
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
     }
     &__arrow{
         margin-bottom: 9rem;
@@ -166,7 +171,12 @@ body{
 }
 
 .top-panel{
+    box-shadow: 0 0 30px rgba(black, .2);
     background-color: #fff;
+    position: fixed;
+    left: 0;right: 0;
+    top: 0;
+    z-index: 10;
     &__row{
         height: 8.7rem;
         justify-content: space-between;
@@ -1002,6 +1012,7 @@ body{
     &__props{
         margin-bottom: .2rem;
         margin-bottom: 2.5rem;
+        max-width: 100%;
     }
     &__body{
         margin-bottom: 3rem;
@@ -1015,10 +1026,13 @@ body{
     justify-content: space-between;
     background: #E7E7E7;
     font-size: 1.4rem;
-    padding: .8rem 3.4rem;
+    padding: 0rem 2.4rem;
+    white-space: nowrap;
+    flex-wrap: wrap;
     &__col{
         display: flex;
         align-items: center;
+        margin: 1rem;
         &:not(:last-child){
             margin-right: 8rem;
         }
@@ -1408,9 +1422,26 @@ body{
             min-width: calc(100% / 6);
         }
     }
+    .vacancy-props{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .vacancy-props__col:not(:last-child){
+        margin-right: 3rem;
+    }
 }
 
 @media screen and (max-width: 768px){
+    .modal-service{
+        flex-direction: column;
+        &__col{
+            width: 100%;
+            &:nth-child(2){
+                height: 50rem;
+                flex: 0 0 50rem;
+            }
+        }
+    }
     .services-detail{
         .slider-nav{
             &>*{
@@ -1440,6 +1471,16 @@ body{
 }
 
 @media screen and (max-width: 575px){
+    .modal-service{
+
+        &__col{
+            width: 100%;
+            &:nth-child(2){
+                height: 30rem;
+                flex: 0 0 30rem;
+            }
+        }
+    }
     .services-detail{
         max-height: 500px;
         top: 0;
@@ -1540,7 +1581,7 @@ body{
             font-size: 1.8rem;
         }
     }
-
+    .modal-vac,
     .modal-portfolio{
         padding: 2rem;
         &__name{
@@ -1560,7 +1601,9 @@ body{
         }
     }
 }
-
+#modalService{
+    padding: 0;
+}
 .fancybox-button--close{
     display: none;
 }
