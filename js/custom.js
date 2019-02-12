@@ -4,12 +4,43 @@ $(function(){
   jQuery('.map-nav__scroll').scrollbar();
   $('input[type="tel"], input[name="tel"]').mask('+7(999)999-99-99');
 
-
+  /* portfolio gal */
+  $(window).on('load', function () {
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 4,
+      slidesPerView: 10,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 6
+        },
+        575: {
+          slidesPerView: 4
+        }
+      }
+    });
+    TABS_SLIDERS.push(galleryThumbs);
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '[data-next]',
+        prevEl: '[data-prev]',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+    TABS_SLIDERS.push(galleryTop);
+  })
+  /* portfolio gal */
 
  
   $('.fancybox').fancybox({
     smallBtn: false,
     afterLoad: function(){
+      
       TABS_SLIDERS.forEach(function (slider) {
         slider.update();
       });
@@ -140,43 +171,17 @@ $(function(){
   /* partners item */
   (function(){
     $('.partners__item').click(function(){
+      $('.partners__item').removeClass('partners__item_active');
       $(this).addClass('partners__item_active');
     });
     $('.tooltip-partners-close').click(function(){
-      $(this).parent().hide();
+      $(this).closest('.partners__item').removeClass('partners__item_active');
+      return false;
     })
   }());
   /* partners item */
 
-  /* portfolio gal */
-  var galleryThumbs = new Swiper('.gallery-thumbs', {
-    spaceBetween: 4,
-    slidesPerView: 10,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      768:{
-        slidesPerView: 6
-      },
-      575:{
-        slidesPerView: 4
-      }
-    }
-  });
-  TABS_SLIDERS.push(galleryThumbs);
-  var galleryTop = new Swiper('.gallery-top', {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: '[data-next]',
-      prevEl: '[data-prev]',
-    },
-    thumbs: {
-      swiper: galleryThumbs
-    }
-  });
-  TABS_SLIDERS.push(galleryTop);
-  /* portfolio gal */
+  
 
   /*services detail */
   (function(){
